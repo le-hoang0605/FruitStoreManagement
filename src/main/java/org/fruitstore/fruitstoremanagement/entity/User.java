@@ -38,7 +38,6 @@ public class User {
     @Column(nullable = false)
     private Role role;
 
-
     private LocalDateTime createdAt;
 
     @PrePersist

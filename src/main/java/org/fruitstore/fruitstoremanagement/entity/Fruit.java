@@ -25,9 +25,7 @@ public class Fruit {
     @Column(nullable = false, columnDefinition = "DECIMAL(10,2) CHECK (price>0)")
     private BigDecimal price;
 
-    @Column(
-            name = "stock_quantity",
-            columnDefinition = "INTEGER CHECK (stock_quantity>=0)")
+    @Column(name = "stock_quantity")
     private Integer stockQuantity = 0;
 
     @ManyToOne
