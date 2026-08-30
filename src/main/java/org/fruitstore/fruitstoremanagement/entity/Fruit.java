@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,6 +16,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
+@SQLDelete(sql = "UPDATE fruits SET is_deleted = true WHERE id = ?")
+@SQLRestriction("is_deleted = false")
 public class Fruit {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -33,6 +37,9 @@ public class Fruit {
     private Category category;
 
     private LocalDateTime createdAt;
+
+    @Column(name = "is_deleted", nullable = false)
+    private boolean isDeleted = false;
 
     @PrePersist
     protected void onCreate() {
