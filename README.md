@@ -1,4 +1,3 @@
-```markdown
 # FRUIT STORE MANAGEMENT SYSTEM
 
 Spring Boot Backend Project
@@ -145,7 +144,6 @@ Repository
 JPA / Hibernate
     ↓
 Database
-
 ```
 
 Security components are integrated into the request processing flow:
@@ -164,7 +162,6 @@ Service
 Repository
    ↓
 Database
-
 ```
 
 The project separates responsibilities between controllers, services, repositories, entities, DTOs, exception handling, and security components.
@@ -199,7 +196,3 @@ At minimum, the following cases should be tested:
 * Authorization restrictions.
 
 JUnit 5 is used for testing, while Mockito can be used to mock dependencies such as repositories.
-
-```
-
-```
