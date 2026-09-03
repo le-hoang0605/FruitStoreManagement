@@ -93,7 +93,7 @@ When an order is created, the system automatically:
 9. Updates the fruit stock.
 10. Saves the order and its order items.
 
-The original exam requirement specifies that the system should extract the user ID from the JWT, calculate the order total from quantity and unit price, and validate stock availability.
+The requirement specifies that the system should extract the user ID from the JWT, calculate the order total from quantity and unit price, and validate stock availability.
 
 ## 5. Security
 
